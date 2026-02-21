@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurante fictício - Sabores autênticos e experiências inesquecíveis">
+    <title>Restaurante Sabor & Arte</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Sabor & Arte</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Bem-vindo ao Sabor & Arte</h1>
+            <p class="hero-subtitle">Uma experiência gastronômica única que combina tradição e inovação</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Ver Menu</a>
+                <a href="#contato" class="btn btn-secondary">Reservar Mesa</a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h2 class="section-title">Nossa História</h2>
+                    <p class="section-description">
+                        Há mais de uma década, o Sabor & Arte nasceu da paixão por criar momentos especiais através da gastronomia. 
+                        Nossa cozinha combina receitas tradicionais com toques contemporâneos, sempre priorizando ingredientes frescos 
+                        e de alta qualidade.
+                    </p>
+                    <p class="section-description">
+                        Cada prato é cuidadosamente elaborado por nossos chefs experientes, garantindo uma experiência única e memorável 
+                        para cada cliente.
+                    </p>
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">🍽️</div>
+                            <h3>Culinária Autêntica</h3>
+                            <p>Receitas tradicionais com toque moderno</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🌿</div>
+                            <h3>Ingredientes Frescos</h3>
+                            <p>Selecionados diariamente</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">👨‍🍳</div>
+                            <h3>Chefs Experientes</h3>
+                            <p>Paixão pela gastronomia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sobre-image">
+                    <div class="image-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promoções Section -->
+    <section class="promocoes">
+        <div class="container">
+            <h2 class="section-title center">Promoções Especiais</h2>
+            <div class="promocoes-grid">
+                <div class="promo-card">
+                    <div class="promo-badge">🔥</div>
+                    <h3>Combo Família</h3>
+                    <p>2 Pratos Principais + 2 Bebidas + 1 Sobremesa</p>
+                    <div class="promo-price">
+                        <span class="old-price">R$ 180</span>
+                        <span class="new-price">R$ 150</span>
+                    </div>
+                    <span class="promo-tag">Economize R$ 30</span>
+                </div>
+                <div class="promo-card featured">
+                    <div class="promo-badge">⭐</div>
+                    <h3>Menu Executivo</h3>
+                    <p>Entrada + Prato Principal + Bebida</p>
+                    <div class="promo-price">
+                        <span class="old-price">R$ 95</span>
+                        <span class="new-price">R$ 75</span>
+                    </div>
+                    <span class="promo-tag">Mais Popular</span>
+                </div>
+                <div class="promo-card">
+                    <div class="promo-badge">🎉</div>
+                    <h3>Happy Hour</h3>
+                    <p>Segunda a Quinta, 18h às 20h</p>
+                    <div class="promo-price">
+                        <span class="old-price">-</span>
+                        <span class="new-price">30% OFF</span>
+                    </div>
+                    <span class="promo-tag">Em Bebidas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title center">Nosso Menu</h2>
+            <p class="section-description center">Descubra nossos pratos especiais</p>
+            
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="entradas">Entradas</button>
+                <button class="category-btn" data-category="principais">Pratos Principais</button>
+                <button class="category-btn" data-category="sobremesas">Sobremesas</button>
+                <button class="category-btn" data-category="bebidas">Bebidas</button>
+            </div>
+
+            <div class="menu-items">
+                <!-- Entradas -->
+                <div class="menu-category active" data-category="entradas">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Bruschetta Italiana</h3>
+                            <p>Pão artesanal com tomate, manjericão e azeite extra virgem</p>
+                        </div>
+                        <span class="price">R$ 28</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Carpaccio de Salmão</h3>
+                            <p>Salmão fresco com rúcula, alcaparras e molho de limão siciliano</p>
+                        </div>
+                        <span class="price">R$ 42</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Salada Caprese</h3>
+                            <p>Mozzarella de búfala, tomate cereja e manjericão fresco</p>
+                        </div>
+                        <span class="price">R$ 35</span>
+                    </div>
+                </div>
+
+                <!-- Principais -->
+                <div class="menu-category" data-category="principais">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Risotto de Camarão</h3>
+                            <p>Arroz arbóreo cremoso com camarões grelhados e ervas frescas</p>
+                        </div>
+                        <span class="price">R$ 68</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Filé Mignon ao Molho Madeira</h3>
+                            <p>Carne macia com molho especial e acompanhamentos</p>
+                        </div>
+                        <span class="price">R$ 85</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Salmão Grelhado</h3>
+                            <p>Salmão com crosta de ervas e legumes assados</p>
+                        </div>
+                        <span class="price">R$ 72</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Penne ao Molho Pesto</h3>
+                            <p>Massa italiana com molho pesto de manjericão e pinoli</p>
+                        </div>
+                        <span class="price">R$ 58</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Frango Grelhado com Ervas</h3>
+                            <p>Peito de frango temperado com ervas finas e legumes</p>
+                        </div>
+                        <span class="price">R$ 62</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Costela de Porco ao Barbecue</h3>
+                            <p>Costela suína assada com molho barbecue artesanal</p>
+                        </div>
+                        <span class="price">R$ 78</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Lasanha à Bolonhesa</h3>
+                            <p>Massa caseira com molho bolonhesa e queijos especiais</p>
+                        </div>
+                        <span class="price">R$ 65</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Peixe à Moda do Chef</h3>
+                            <p>Peixe fresco do dia com molho especial e acompanhamentos</p>
+                        </div>
+                        <span class="price">R$ 75</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Risotto de Cogumelos</h3>
+                            <p>Arroz arbóreo cremoso com mix de cogumelos frescos</p>
+                        </div>
+                        <span class="price">R$ 58</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Picanha na Chapa</h3>
+                        <p>Picanha grelhada na chapa com farofa e vinagrete</p>
+                        </div>
+                        <span class="price">R$ 88</span>
+                    </div>
+                </div>
+
+                <!-- Sobremesas -->
+                <div class="menu-category" data-category="sobremesas">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Tiramisu Tradicional</h3>
+                            <p>Clássico italiano com café e cacau</p>
+                        </div>
+                        <span class="price">R$ 32</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Brownie com Sorvete</h3>
+                            <p>Brownie quente com sorvete de baunilha e calda de chocolate</p>
+                        </div>
+                        <span class="price">R$ 28</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Cheesecake de Frutas Vermelhas</h3>
+                            <p>Torta cremosa com calda de frutas vermelhas</p>
+                        </div>
+                        <span class="price">R$ 30</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Pudim de Leite Condensado</h3>
+                            <p>Clássico pudim brasileiro com calda de caramelo</p>
+                        </div>
+                        <span class="price">R$ 22</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Mousse de Chocolate</h3>
+                            <p>Mousse cremosa de chocolate belga</p>
+                        </div>
+                        <span class="price">R$ 26</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Petit Gateau</h3>
+                            <p>Bolinho de chocolate quente com sorvete de baunilha</p>
+                        </div>
+                        <span class="price">R$ 34</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Torta de Limão</h3>
+                            <p>Torta de limão siciliano com merengue</p>
+                        </div>
+                        <span class="price">R$ 28</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Brigadeiro Gourmet</h3>
+                            <p>3 unidades: tradicional, morango e doce de leite</p>
+                        </div>
+                        <span class="price">R$ 18</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Banana Caramelada</h3>
+                            <p>Banana grelhada com calda de caramelo e sorvete</p>
+                        </div>
+                        <span class="price">R$ 24</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Crème Brûlée</h3>
+                            <p>Clássico francês com açúcar queimado</p>
+                        </div>
+                        <span class="price">R$ 32</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Açaí na Tigela</h3>
+                            <p>Açaí cremoso com granola, banana e mel</p>
+                        </div>
+                        <span class="price">R$ 20</span>
+                    </div>
+                </div>
+
+                <!-- Bebidas -->
+                <div class="menu-category" data-category="bebidas">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Vinho Tinto Reserva</h3>
+                            <p>Seleção especial da casa</p>
+                        </div>
+                        <span class="price">R$ 45</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Coquetel Artesanal</h3>
+                            <p>Drinks exclusivos preparados pelo nosso bartender</p>
+                        </div>
+                        <span class="price">R$ 28</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Suco Natural</h3>
+                            <p>Variedade de frutas frescas</p>
+                        </div>
+                        <span class="price">R$ 12</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Água Mineral</h3>
+                            <p>Com ou sem gás</p>
+                        </div>
+                        <span class="price">R$ 6</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Refrigerante</h3>
+                            <p>Coca-Cola, Pepsi, Guaraná, Fanta ou Sprite</p>
+                        </div>
+                        <span class="price">R$ 8</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Smoothie de Frutas</h3>
+                            <p>Morangos, banana, mamão ou frutas vermelhas</p>
+                        </div>
+                        <span class="price">R$ 18</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Chá Gelado</h3>
+                            <p>Chá verde, chá preto ou chá de pêssego</p>
+                        </div>
+                        <span class="price">R$ 10</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Água de Coco</h3>
+                            <p>Coco fresco natural</p>
+                        </div>
+                        <span class="price">R$ 14</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Limonada Suíça</h3>
+                            <p>Limonada especial com hortelã</p>
+                        </div>
+                        <span class="price">R$ 15</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Milkshake</h3>
+                            <p>Chocolate, morango, baunilha ou caramelo</p>
+                        </div>
+                        <span class="price">R$ 20</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Café Expresso</h3>
+                            <p>Café especial da casa</p>
+                        </div>
+                        <span class="price">R$ 8</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Cappuccino</h3>
+                            <p>Com leite vaporizado e canela</p>
+                        </div>
+                        <span class="price">R$ 12</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria Section -->
+    <section class="galeria">
+        <div class="container">
+            <h2 class="section-title center">Nossa Galeria</h2>
+            <p class="section-description center">Conheça nossos pratos e ambiente</p>
+            <div class="galeria-grid">
+                <div class="galeria-item" data-gallery="pratos">
+                    <div class="galeria-image" style="background: linear-gradient(135deg, #d4a574, #8b4513);">
+                        <div class="galeria-overlay">
+                            <span class="galeria-icon">🍽️</span>
+                            <span class="galeria-text">Ver Fotos</span>
+                        </div>
+                    </div>
+                    <h3 class="galeria-title">Pratos Principais</h3>
+                </div>
+                <div class="galeria-item" data-gallery="bebidas">
+                    <div class="galeria-image" style="background: linear-gradient(135deg, #8b4513, #d4a574);">
+                        <div class="galeria-overlay">
+                            <span class="galeria-icon">🍷</span>
+                            <span class="galeria-text">Ver Fotos</span>
+                        </div>
+                    </div>
+                    <h3 class="galeria-title">Bebidas</h3>
+                </div>
+                <div class="galeria-item" data-gallery="sobremesas">
+                    <div class="galeria-image" style="background: linear-gradient(135deg, #d4a574, #8b4513);">
+                        <div class="galeria-overlay">
+                            <span class="galeria-icon">🍰</span>
+                            <span class="galeria-text">Ver Fotos</span>
+                        </div>
+                    </div>
+                    <h3 class="galeria-title">Sobremesas</h3>
+                </div>
+                <div class="galeria-item" data-gallery="ambiente">
+                    <div class="galeria-image" style="background: linear-gradient(135deg, #8b4513, #d4a574);">
+                        <div class="galeria-overlay">
+                            <span class="galeria-icon">🏛️</span>
+                            <span class="galeria-text">Ver Fotos</span>
+                        </div>
+                    </div>
+                    <h3 class="galeria-title">Ambiente</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
+            <button class="lightbox-prev" id="lightboxPrev">&#8249;</button>
+            <button class="lightbox-next" id="lightboxNext">&#8250;</button>
+            <div class="lightbox-image-container">
+                <img id="lightboxImage" src="" alt="Galeria">
+                <div class="lightbox-counter">
+                    <span id="currentImage">1</span> / <span id="totalImages">4</span>
+                </div>
+            </div>
+            <div class="lightbox-thumbnails" id="lightboxThumbnails"></div>
+        </div>
+    </div>
+
+    <!-- Depoimentos Section -->
+    <section class="depoimentos">
+        <div class="container">
+            <h2 class="section-title center">O Que Nossos Clientes Dizem</h2>
+            <p class="section-description center">Experiências reais de quem já nos visitou</p>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="depoimento-text">"Experiência incrível! A comida estava perfeita e o atendimento impecável. Voltarei com certeza!"</p>
+                    <div class="depoimento-author">
+                        <div class="author-avatar">M</div>
+                        <div>
+                            <h4>Maria Silva</h4>
+                            <span>Cliente desde 2022</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="depoimento-text">"Melhor restaurante da região! Os pratos são deliciosos e o ambiente é acolhedor. Recomendo!"</p>
+                    <div class="depoimento-author">
+                        <div class="author-avatar">J</div>
+                        <div>
+                            <h4>João Santos</h4>
+                            <span>Cliente desde 2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="depoimento-text">"Ambiente perfeito para um jantar romântico. A comida superou todas as expectativas!"</p>
+                    <div class="depoimento-author">
+                        <div class="author-avatar">A</div>
+                        <div>
+                            <h4>Ana Costa</h4>
+                            <span>Cliente desde 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estatísticas Section -->
+    <section class="estatisticas">
+        <div class="container">
+            <div class="estatisticas-grid">
+                <div class="estatistica-item">
+                    <div class="estatistica-icon">👥</div>
+                    <div class="estatistica-number" data-target="5000">0</div>
+                    <div class="estatistica-label">Clientes Satisfeitos</div>
+                </div>
+                <div class="estatistica-item">
+                    <div class="estatistica-icon">🍽️</div>
+                    <div class="estatistica-number" data-target="15000">0</div>
+                    <div class="estatistica-label">Pratos Servidos</div>
+                </div>
+                <div class="estatistica-item">
+                    <div class="estatistica-icon">⭐</div>
+                    <div class="estatistica-number" data-target="14">0</div>
+                    <div class="estatistica-label">Anos de Experiência</div>
+                </div>
+                <div class="estatistica-item">
+                    <div class="estatistica-icon">🏆</div>
+                    <div class="estatistica-number" data-target="25">0</div>
+                    <div class="estatistica-label">Prêmios Recebidos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title center">Entre em Contato</h2>
+            <p class="section-description center">Estamos prontos para recebê-lo!</p>
+            
+            <div class="contato-content">
+                <div class="contato-info">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h3>Endereço</h3>
+                            <p>Cabo Frio,<br>Centro - Rio de janeiro  RJ</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p>(22) 99751-8427</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>evolutivatech922@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📱</div>
+                        <div>
+                            <h3>Instagram</h3>
+                            <p><a href="https://www.instagram.com/evolutiva-tech" target="_blank" style="color: var(--primary-color); text-decoration: none;">@evolutiva-tech</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div>
+                            <h3>Horário de Funcionamento</h3>
+                            <p>Terça a Domingo<br>18:00 - 23:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contato-form">
+                    <form id="reserva-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Seu email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Seu telefone" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="time" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" placeholder="Número de pessoas" min="1" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Mensagem (opcional)" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Reservar Mesa</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sabor & Arte</h3>
+                    <p>Experiências gastronômicas inesquecíveis desde 2010</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/evolutiva-tech" target="_blank" class="social-link">Instagram @evolutiva-tech</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">WhatsApp</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Receba nossas promoções e novidades</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu email">
+                        <button type="submit" class="btn btn-secondary">Inscrever</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sabor & Arte. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botões Flutuantes -->
+    <a href="https://wa.me/5522997518427?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva" target="_blank" class="whatsapp-float" title="Fale conosco no WhatsApp">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.825.744 5.48 2.044 7.779L0 32l8.447-2.012C10.644 31.256 13.199 32 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.456 0-4.763-.64-6.763-1.76l-.483-.288-5.003 1.192 1.197-4.88-.315-.5A13.26 13.26 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm8.61-10.11c-.248-.124-1.47-.725-1.697-.81-.228-.083-.393-.124-.558.124-.165.248-.64.81-.784.976-.145.165-.29.186-.538.062-.248-.124-1.047-.386-1.994-1.23-.737-.656-1.235-1.465-1.38-1.712-.145-.248-.015-.382.109-.505.113-.113.248-.29.372-.435.124-.145.165-.248.248-.413.083-.165.042-.31-.021-.435-.063-.124-.558-1.345-.765-1.843-.2-.49-.404-.424-.558-.432-.145-.008-.31-.009-.475-.009s-.434.062-.663.31c-.228.248-.87.85-.87 2.073 0 1.223.89 2.405 1.014 2.57.124.165 1.75 2.667 4.235 3.727.59.256 1.05.409 1.407.523.59.19 1.127.163 1.55.099.474-.072 1.47-.6 1.677-1.18.207-.579.207-1.075.145-1.18-.063-.104-.228-.165-.475-.289z"/>
+        </svg>
+    </a>
+    
+    <button class="back-to-top" id="backToTop" title="Voltar ao topo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
