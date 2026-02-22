@@ -2,6 +2,15 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
+// Helper para fechar o menu
+function closeMenu() {
+    navLinks.classList.remove('active');
+    const spans = menuToggle.querySelectorAll('span');
+    spans[0].style.transform = 'none';
+    spans[1].style.opacity = '1';
+    spans[2].style.transform = 'none';
+}
+
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     
@@ -21,12 +30,25 @@ menuToggle.addEventListener('click', () => {
 // Fechar menu ao clicar em um link
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        const spans = menuToggle.querySelectorAll('span');
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
+        closeMenu();
     });
+});
+
+// Fechar menu ao redimensionar a janela
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+        closeMenu();
+    }
+});
+
+// Fechar menu ao tocar fora dele (mobile)
+document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+        const isMenuClick = e.target.closest('.nav-links') || e.target.closest('.menu-toggle');
+        if (!isMenuClick && navLinks.classList.contains('active')) {
+            closeMenu();
+        }
+    }
 });
 
 // Menu Categories Toggle
@@ -185,14 +207,17 @@ document.querySelectorAll('.promo-card, .galeria-item, .depoimento-card').forEac
     observer.observe(el);
 });
 
-// Efeito parallax suave no hero
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero && scrolled < window.innerHeight) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
+// Efeito parallax suave no hero (desabilitar em mobile para melhor performance)
+const isDesktop = window.innerWidth > 768;
+if (isDesktop) {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector('.hero');
+        if (hero && scrolled < window.innerHeight) {
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+    });
+}
 
 // Adicionar efeito de hover nas promoções
 document.querySelectorAll('.promo-card').forEach(card => {
