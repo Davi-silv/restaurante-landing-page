@@ -25,6 +25,7 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
+    padding-top: 70px;
 }
 
 h1, h2, h3 {
@@ -46,7 +47,16 @@ h1, h2, h3 {
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow);
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.hide {
+    transform: translateY(-100%);
+    box-shadow: none;
+}
+
+.header.show {
+    transform: translateY(0);
 }
 
 .nav {
@@ -114,7 +124,7 @@ h1, h2, h3 {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: calc(100vh - 70px);
     background: linear-gradient(135deg, rgba(139, 69, 19, 0.8), rgba(212, 165, 116, 0.8)),
                 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23d4a574" width="1200" height="800"/><path d="M0,400 Q300,300 600,400 T1200,400 L1200,800 L0,800 Z" fill="%238b4513" opacity="0.3"/></svg>');
     background-size: cover;
@@ -577,6 +587,10 @@ section {
 
 /* Responsive - Large Tablets (1024px) */
 @media (max-width: 1024px) {
+    body {
+        padding-top: 70px;
+    }
+    
     .logo {
         font-size: 1.5rem;
     }
@@ -670,8 +684,7 @@ section {
     }
 
     .hero {
-        height: 90vh;
-        padding-top: 70px;
+        height: calc(100vh - 70px);
     }
     
     .hero-title {
@@ -868,7 +881,7 @@ section {
     }
     
     .hero {
-        height: 80vh;
+        height: calc(100vh - 70px);
     }
     
     .hero-title {
@@ -975,7 +988,7 @@ section {
     }
     
     .hero {
-        height: 70vh;
+        height: calc(100vh - 70px);
     }
     
     .hero-title {

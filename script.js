@@ -95,20 +95,30 @@ newsletterForm.addEventListener('submit', (e) => {
     newsletterForm.reset();
 });
 
-// Header scroll effect
-let lastScroll = 0;
+// Header scroll effect - Hide on scroll down, show on scroll up
+let lastScrollTop = 0;
 const header = document.querySelector('.header');
+const heroHeight = window.innerHeight;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
-    if (currentScroll > 100) {
-        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
-    } else {
+    // Se estiver perto do topo (menos de 100px), mostrar o header
+    if (currentScroll <= 100) {
+        header.classList.remove('hide');
         header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+    } 
+    // Se está scrollando para baixo, esconder o header
+    else if (currentScroll > lastScrollTop && currentScroll > 100) {
+        header.classList.add('hide');
+    } 
+    // Se está scrollando para cima, mostrar o header
+    else if (currentScroll < lastScrollTop) {
+        header.classList.remove('hide');
+        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
     }
     
-    lastScroll = currentScroll;
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
 // Animação ao scroll (Intersection Observer)
